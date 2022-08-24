@@ -1,6 +1,6 @@
-# Turborepo starter with pnpm
+# UnoCSSC
 
-This is an official starter turborepo.
+A UnoCSS component library.
 
 ## What's inside?
 
@@ -9,8 +9,7 @@ This turborepo uses [pnpm](https://pnpm.io) as a packages manager. It includes t
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `ui`: a stub React component library shared with `docs` application
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
@@ -33,7 +32,6 @@ This repository is used in the `npx create-turbo@latest` command, and selected w
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 pnpm run build
 ```
 
@@ -42,7 +40,6 @@ pnpm run build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
 pnpm run dev
 ```
 
@@ -53,7 +50,6 @@ Turborepo can use a technique known as [Remote Caching](https://turborepo.org/do
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
 pnpx turbo login
 ```
 
