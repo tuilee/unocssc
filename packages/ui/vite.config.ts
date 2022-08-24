@@ -4,16 +4,20 @@ import react from "@vitejs/plugin-react";
 import Unocss from "unocss/vite";
 
 export default defineConfig({
-  plugins: [react(), Unocss()],
+  plugins: [Unocss(), react()],
   build: {
-    cssCodeSplit: true,
     lib: {
-      entry: resolve(__dirname, "index.tsx"),
+      entry: resolve(__dirname, "index.ts"),
       name: "@unocss/ui",
       fileName: "index",
     },
     rollupOptions: {
       external: ["react"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
     },
   },
 });

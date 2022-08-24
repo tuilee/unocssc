@@ -11,10 +11,15 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.umd.cjs"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
   },
   "license": "MIT",
   "scripts": {
+    "dev": "vite build --watch",
     "build": "vite build",
     "lint": "eslint *.ts*"
   },
