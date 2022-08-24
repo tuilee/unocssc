@@ -29,5 +29,6 @@
   },
   "dependencies": {
     "classnames": "^2.3.1"
-  }
+  },
+  "author": "Roberth Eliut González @eliutdev"
 }

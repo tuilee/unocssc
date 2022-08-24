@@ -2,7 +2,6 @@
   "name": "unocssc",
   "version": "0.0.0",
   "description": "A UnoCSS component library.",
-  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -26,5 +25,6 @@
     "pnpm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "ppnpm@7.9.0"
+  "packageManager": "ppnpm@7.9.0",
+  "author": "Roberth Eliut González @eliutdev"
 }
