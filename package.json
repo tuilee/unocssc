@@ -2,11 +2,15 @@
   "name": "unocssc",
   "version": "0.0.0",
   "description": "A UnoCSS component library.",
+  "private": true,
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "scripts": {
+    "build": "pnpx turbo run build",
+    "dev": "pnpx turbo run dev --parallel",
+    "lint": "pnpx turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -17,6 +21,5 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "pnpm@7.9.0"
 }

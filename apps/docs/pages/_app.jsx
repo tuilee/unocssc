@@ -1,4 +1,4 @@
-import "@unocss/ui/style.css";
+import "@unocssc/ui/style.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

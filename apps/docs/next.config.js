@@ -1,4 +1,4 @@
-const withTM = require("next-transpile-modules")(["@unocss/ui"]);
+const withTM = require("next-transpile-modules")(["@unocssc/ui"]);
 
 module.exports = withTM({
   reactStrictMode: true,
