@@ -30,5 +30,10 @@
   "dependencies": {
     "classnames": "^2.3.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliutdev/unocssc.git"
+  },
+  "homepage": "https://unocssc.vercel.app",
   "author": "Roberth Eliut González @eliutdev"
 }
