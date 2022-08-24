@@ -5,5 +5,5 @@ export interface ButtonProps {
   children: React.ReactNode;
   variant?: Variant;
   disabled?: boolean;
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

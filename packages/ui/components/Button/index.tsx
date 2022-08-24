@@ -13,12 +13,12 @@ const BASE_STYLE = [
 ];
 
 const styles: {
-  [key in Variant]: string[];
+  [key in Variant]: string;
 } = {
-  primary: ["c-white", "bg-blue-6", "hover:bg-blue-8"],
-  success: ["c-white", "bg-green-6", "hover:bg-green-8"],
-  danger: ["c-white", "bg-red-6", "hover:bg-red-8"],
-  warning: ["c-white", "bg-yellow-6", "hover:bg-yellow-8"],
+  primary: "c-white bg-blue-6 h:primary",
+  success: "c-white bg-green-6 h:success",
+  danger: "c-white bg-red-6 h:danger",
+  warning: "c-white bg-yellow-6 h:warning",
 };
 
 export const Button = ({
@@ -32,7 +32,11 @@ export const Button = ({
   return (
     <button
       type={type}
-      className={classnames(BASE_STYLE, variant && styles[variant])}
+      className={classnames(
+        BASE_STYLE,
+        variant && styles[variant],
+        disabled && variant && `d:${variant}`
+      )}
       disabled={disabled}
       onClick={onClick}
       {...props}

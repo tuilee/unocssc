@@ -10,6 +10,13 @@ export default function Docs() {
       <Button variant="success">Success Button</Button>
       <Button variant="danger">Danger Button</Button>
       <Button variant="warning">Warning Button</Button>
+      <h2>Disabled state</h2>
+      <Button variant="primary" disabled>
+        Primary Button
+      </Button>
+      <Button variant="success" disabled>
+        Success Button
+      </Button>
     </div>
   );
 }
