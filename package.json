@@ -12,10 +12,10 @@
     "dev": "pnpx turbo run dev --parallel",
     "lint": "pnpx turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run test && npm run lint",
-    "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
+    "prepare": "pnpm run build",
+    "prepublishOnly": "pnpm run test && pnpm run lint",
+    "preversion": "pnpm run lint",
+    "version": "pnpm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "devDependencies": {
@@ -23,8 +23,8 @@
     "prettier": "latest"
   },
   "engines": {
-    "npm": ">=7.0.0",
+    "pnpm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "pnpm@7.9.0"
+  "packageManager": "ppnpm@7.9.0"
 }
