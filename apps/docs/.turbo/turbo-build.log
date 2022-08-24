@@ -1,0 +1,26 @@
+[34mdocs:build[0m: cache hit, replaying output [2mee46b9b749552f4a[0m
+[34mdocs:build: [0m
+[34mdocs:build: [0m> docs@0.0.0 build C:\Users\reliu\Documents\Development\unocssc\apps\docs
+[34mdocs:build: [0m> next build
+[34mdocs:build: [0m
+[34mdocs:build: [0minfo  - Linting and checking validity of types...
+[34mdocs:build: [0minfo  - Creating an optimized production build...
+[34mdocs:build: [0minfo  - Compiled successfully
+[34mdocs:build: [0minfo  - Collecting page data...
+[34mdocs:build: [0minfo  - Generating static pages (0/3)
+[34mdocs:build: [0minfo  - Generating static pages (3/3)
+[34mdocs:build: [0minfo  - Finalizing page optimization...
+[34mdocs:build: [0m
+[34mdocs:build: [0mPage                                       Size     First Load JS
+[34mdocs:build: [0m┌ ○ /                                      504 B          74.6 kB
+[34mdocs:build: [0m├   /_app                                  0 B            74.1 kB
+[34mdocs:build: [0m└ ○ /404                                   195 B          74.3 kB
+[34mdocs:build: [0m+ First Load JS shared by all              74.1 kB
+[34mdocs:build: [0m  ├ chunks/framework-52fcd4740f49159a.js   42 kB
+[34mdocs:build: [0m  ├ chunks/main-592c338229c94cb4.js        30.8 kB
+[34mdocs:build: [0m  ├ chunks/pages/_app-9a481be78af42f4c.js  522 B
+[34mdocs:build: [0m  ├ chunks/webpack-69bfa6990bb9e155.js     769 B
+[34mdocs:build: [0m  └ css/b57701e83f7b814d.css               475 B
+[34mdocs:build: [0m
+[34mdocs:build: [0m○  (Static)  automatically rendered as static HTML (uses no initial props)
+[34mdocs:build: [0m
