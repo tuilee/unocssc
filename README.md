@@ -1,6 +1,6 @@
 # UnoCSSC
 
-A UnoCSS component library.
+A beautiful and minimal component library powered by UnoCSS.
 
 ## What's inside?
 
