@@ -1,7 +1,79 @@
 import * as React from "react";
 import { MDXProvider } from "@mdx-js/react";
-import type { ComponentMDXLayoutProps } from "./types";
+import { AnimatePresence, motion } from "framer-motion";
+import { ClipboardCopyIcon, CheckIcon } from "@heroicons/react/outline";
 import Head from "next/head";
+import type { ComponentMDXLayoutProps } from "./types";
+
+const Pre = (props: any) => {
+  const textRef: any = React.useRef(null);
+
+  const [hovered, setHovered] = React.useState(false);
+  const [copied, setCopied] = React.useState(false);
+
+  const onEnter = () => {
+    setHovered(true);
+  };
+  const onLeave = () => {
+    setHovered(false);
+    setCopied(false);
+  };
+
+  const onCopy = () => {
+    setCopied(true);
+    navigator.clipboard.writeText(textRef?.current?.textContent ?? "");
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  };
+
+  return (
+    <div
+      ref={textRef}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+      className="relative my-6 w-full h-full bg-gray-800 px-4 rounded-lg border border-gray-400 border-opacity-50"
+    >
+      <pre className="w-full h-full overflow-auto max-h-3/4 max-h-96 py-4 rounded-lg">
+        {hovered && (
+          <button
+            aria-label="Copy code"
+            type="button"
+            className={`absolute right-2 top-2 h-8 w-8 inline-flex items-center justify-center rounded text-stone-300 p-1 ${
+              copied
+                ? "border-green-400 focus:border-green-400 focus:outline-none"
+                : "border-gray-300"
+            }`}
+            onClick={onCopy}
+          >
+            <AnimatePresence initial={false}>
+              {copied ? (
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  transition={{ duration: 1 }}
+                >
+                  <CheckIcon width={24} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  initial={{ scale: 1 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  transition={{ duration: 0 }}
+                >
+                  <ClipboardCopyIcon width={24} cursor="pointer" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
+        )}
+        {props.children}
+      </pre>
+    </div>
+  );
+};
 
 const MDXComponents = {
   h1: (props: any) => (
@@ -14,17 +86,7 @@ const MDXComponents = {
       {props.children}
     </h2>
   ),
-  pre: (props: any) => (
-    <pre
-      className="w-full h-full overflow-auto"
-      style={{
-        padding: "1rem",
-        backgroundColor: "#282c34",
-      }}
-    >
-      {props.children}
-    </pre>
-  ),
+  pre: Pre,
 };
 
 export const MDXComponent = ({ children, meta }: ComponentMDXLayoutProps) => {
