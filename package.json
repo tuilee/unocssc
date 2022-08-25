@@ -1,0 +1,30 @@
+{
+  "name": "unocssc",
+  "version": "0.0.0",
+  "description": "A UnoCSS component library.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "pnpx turbo run build",
+    "dev": "pnpx turbo run dev --parallel",
+    "lint": "pnpx turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "pnpm run build",
+    "prepublishOnly": "pnpm run test && pnpm run lint",
+    "preversion": "pnpm run lint",
+    "version": "pnpm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "latest"
+  },
+  "engines": {
+    "pnpm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "ppnpm@7.9.0",
+  "author": "Roberth Eliut González @eliutdev"
+}

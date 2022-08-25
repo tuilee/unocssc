@@ -1,0 +1,32 @@
+import { Sidenav } from "../../components/Sidenav.tsx";
+import { MDXComponent } from "../../components/layouts/MDXComponent.tsx";
+
+export const meta = {
+  title: "Button",
+};
+
+export default ({ children }) => (
+  <>
+    <Sidenav />
+    <MDXComponent meta={meta}>{children}</MDXComponent>
+  </>
+);
+
+# Button
+
+lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
+
+## Default Button
+
+```tsx
+import { Button } from "@superui/styles";
+
+<Button
+  variant="primary"
+  onClick={() => alert("Hello World!")}
+  icon={<ArrowIcon />}
+  iconPosition="left"
+>
+  Primary Button
+</Button>;
+```

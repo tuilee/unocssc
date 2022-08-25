@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mdx-container {
+    @apply flex;
+}
+
+.toc {
+    @apply bg-gray-500 rounded-lg py-2 bg-opacity-25 w-full;
+}
+
+.toc-item {
+    @apply before:content-['-'] before:pr-2 font-semibold text-lg;
+}
+
+.toc-link {
+    @apply no-underline text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white;
+}
