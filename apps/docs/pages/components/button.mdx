@@ -1,3 +1,5 @@
+import { Button } from "@unocssc/ui";
+
 import { Sidenav } from "../../components/Sidenav.tsx";
 import { MDXComponent } from "../../components/layouts/MDXComponent.tsx";
 
@@ -18,10 +20,25 @@ lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Examples
 
+<Button>Default</Button>
+<Button variant="primary">Primary</Button>
+<Button variant="success">Success</Button>
+<Button variant="danger">Danger</Button>
+<Button variant="warning">Warning</Button>
+
 ```jsx
 <Button>Default</Button>
 <Button variant="primary">Primary</Button>
 <Button variant="success">Success</Button>
 <Button variant="danger">Danger</Button>
 <Button variant="warning">Warning</Button>
+```
+
+## Button tags
+
+The butto is designed to be used as a native button element, but can also be used as a link with the href prop or input with the type prop.
+
+```jsx
+<Button href="#">Button</Button>
+<Button href="#">Button</Button>
 ```
