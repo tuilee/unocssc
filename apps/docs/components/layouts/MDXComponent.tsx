@@ -5,9 +5,14 @@ import Head from "next/head";
 
 const MDXComponents = {
   h1: (props: any) => (
-    <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+    <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight my-3">
       {props.children}
     </h1>
+  ),
+  h2: (props: any) => (
+    <h2 className="text-3xl sm:text-2xl text-slate-900 tracking-tight my-3">
+      {props.children}
+    </h2>
   ),
   pre: (props: any) => (
     <pre
@@ -33,7 +38,7 @@ export const MDXComponent = ({ children, meta }: ComponentMDXLayoutProps) => {
           marginLeft: "15rem",
         }}
       >
-        <div className="mdx-container p-4">
+        <div className="p-4">
           <MDXProvider components={MDXComponents as any}>
             {children}
           </MDXProvider>
