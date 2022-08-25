@@ -1,9 +1,5 @@
 import * as React from "react";
-
-export interface ComponentLayoutProps {
-  children: React.ReactNode;
-  title: string;
-}
+import type { ComponentLayoutProps } from "./types";
 
 export const ComponentLayout = ({ children, title }: ComponentLayoutProps) => {
   return (

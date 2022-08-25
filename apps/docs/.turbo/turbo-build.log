@@ -1,26 +1,24 @@
-[34mdocs:build[0m: cache hit, replaying output [2mee46b9b749552f4a[0m
-[34mdocs:build: [0m
-[34mdocs:build: [0m> docs@0.0.0 build C:\Users\reliu\Documents\Development\unocssc\apps\docs
-[34mdocs:build: [0m> next build
-[34mdocs:build: [0m
-[34mdocs:build: [0minfo  - Linting and checking validity of types...
-[34mdocs:build: [0minfo  - Creating an optimized production build...
-[34mdocs:build: [0minfo  - Compiled successfully
-[34mdocs:build: [0minfo  - Collecting page data...
-[34mdocs:build: [0minfo  - Generating static pages (0/3)
-[34mdocs:build: [0minfo  - Generating static pages (3/3)
-[34mdocs:build: [0minfo  - Finalizing page optimization...
-[34mdocs:build: [0m
-[34mdocs:build: [0mPage                                       Size     First Load JS
-[34mdocs:build: [0m┌ ○ /                                      504 B          74.6 kB
-[34mdocs:build: [0m├   /_app                                  0 B            74.1 kB
-[34mdocs:build: [0m└ ○ /404                                   195 B          74.3 kB
-[34mdocs:build: [0m+ First Load JS shared by all              74.1 kB
-[34mdocs:build: [0m  ├ chunks/framework-52fcd4740f49159a.js   42 kB
-[34mdocs:build: [0m  ├ chunks/main-592c338229c94cb4.js        30.8 kB
-[34mdocs:build: [0m  ├ chunks/pages/_app-9a481be78af42f4c.js  522 B
-[34mdocs:build: [0m  ├ chunks/webpack-69bfa6990bb9e155.js     769 B
-[34mdocs:build: [0m  └ css/b57701e83f7b814d.css               475 B
-[34mdocs:build: [0m
-[34mdocs:build: [0m○  (Static)  automatically rendered as static HTML (uses no initial props)
-[34mdocs:build: [0m
+docs:build: cache hit, replaying output 3a91741cdc934f16
+docs:build: 
+docs:build: > docs@0.0.0 build C:\Users\reliu\Documents\Development\unocssc\apps\docs
+docs:build: > next build
+docs:build: 
+docs:build: info  - Linting and checking validity of types...
+docs:build: 
+docs:build: ./components/Navigation.tsx
+docs:build: 36:23  Warning: Do not use `<img>` element. Use `<Image />` from `next/image` instead. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+docs:build: 41:23  Warning: Do not use `<img>` element. Use `<Image />` from `next/image` instead. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+docs:build: 
+docs:build: info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+docs:build: info  - Creating an optimized production build...
+docs:build: file:///C:/Users/reliu/Documents/Development/unocssc/node_modules/.pnpm/unified@10.1.2/node_modules/unified/lib/index.js:136
+docs:build:       const transformer = attacher.call(processor, ...options)
+docs:build:                                    ^
+docs:build: 
+docs:build: TypeError: attacher.call is not a function
+docs:build:     at Function.freeze (file:///C:/Users/reliu/Documents/Development/unocssc/node_modules/.pnpm/unified@10.1.2/node_modules/unified/lib/index.js:136:36)
+docs:build:     at Function.process (file:///C:/Users/reliu/Documents/Development/unocssc/node_modules/.pnpm/unified@10.1.2/node_modules/unified/lib/index.js:375:15)
+docs:build:     at process (file:///C:/Users/reliu/Documents/Development/unocssc/node_modules/.pnpm/@mdx-js+mdx@2.1.3/node_modules/@mdx-js/mdx/lib/util/create-format-aware-processors.js:46:22)
+docs:build:     at Object.loader (file:///C:/Users/reliu/Documents/Development/unocssc/node_modules/.pnpm/@mdx-js+loader@2.1.3/node_modules/@mdx-js/loader/lib/index.js:65:3)
+docs:build:     at C:\Users\reliu\Documents\Development\unocssc\node_modules\.pnpm\@mdx-js+loader@2.1.3\node_modules\@mdx-js\loader\index.cjs:14:19
+docs:build:  ELIFECYCLE  Command failed with exit code 1.
