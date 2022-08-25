@@ -1,4 +1,3 @@
-import { Git } from "@heroicons/react/outline";
 import Link from "next/link";
 
 export const Hero = () => {

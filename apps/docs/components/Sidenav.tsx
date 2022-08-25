@@ -46,8 +46,8 @@ export const Sidenav = () => {
             <li key={item.name} className="relative">
               <span className="font-extrabold text-slate-900">{item.name}</span>
               <ul>
-                {item.links.map((link) => (
-                  <li key={link.href} className="relative">
+                {item.links.map((link, index) => (
+                  <li key={`${link.href}-${index}`} className="relative">
                     <Link href={link.href}>
                       <a
                         className="flex items-center text-sm py-4 px-6 h-12 overflow-hidden text-gray-700 text-ellipsis whitespace-nowrap rounded hover:text-gray-900 hover:font-bold transition duration-300 ease-in-out"

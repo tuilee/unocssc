@@ -7,7 +7,7 @@ const navigation = [
   { name: "Documentation", href: "/documentation", current: false },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -48,8 +48,8 @@ export const Navigation = () => {
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <Link key={item.name} href={item.href}>
+                    {navigation.map((item, index) => (
+                      <Link key={`${item.href}-${index}`} href={item.href}>
                         <a
                           className={classNames(
                             item.current
